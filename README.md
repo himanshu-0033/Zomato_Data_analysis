@@ -154,4 +154,4 @@ A word cloud analysis of the most frequently liked dishes reveals Bangalore's fa
 
 ## 👨‍💻 Author
 **Himanshu**  
-*Built for IIT KGP CDC Portfolio*
+Linkedin : https://www.linkedin.com/in/himanshu-malik-a3aa0331a/
