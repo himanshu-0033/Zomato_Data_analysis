@@ -1,0 +1,16 @@
+# Ignore large data files
+*.csv
+*.db
+*.sqlite
+*.sqlite3
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
