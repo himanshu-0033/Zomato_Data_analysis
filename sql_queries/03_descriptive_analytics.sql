@@ -8,11 +8,11 @@
 -- -------------------------------------------------------
 SELECT
     CASE
-        WHEN rating >= 1.0 AND rating < 2.0 THEN '1.0 – 1.9 ⭐'
-        WHEN rating >= 2.0 AND rating < 3.0 THEN '2.0 – 2.9 ⭐⭐'
-        WHEN rating >= 3.0 AND rating < 4.0 THEN '3.0 – 3.9 ⭐⭐⭐'
-        WHEN rating >= 4.0 AND rating < 5.0 THEN '4.0 – 4.9 ⭐⭐⭐⭐'
-        WHEN rating = 5.0                   THEN '5.0 ⭐⭐⭐⭐⭐'
+        WHEN rating >= 1.0 AND rating < 2.0 THEN '1.0 - 1.9'
+        WHEN rating >= 2.0 AND rating < 3.0 THEN '2.0 - 2.9'
+        WHEN rating >= 3.0 AND rating < 4.0 THEN '3.0 - 3.9'
+        WHEN rating >= 4.0 AND rating < 5.0 THEN '4.0 - 4.9'
+        WHEN rating = 5.0                   THEN '5.0'
         ELSE 'Unrated'
     END AS rating_bucket,
     COUNT(*) AS restaurant_count,

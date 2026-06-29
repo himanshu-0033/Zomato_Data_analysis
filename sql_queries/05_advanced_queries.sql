@@ -58,9 +58,9 @@ SELECT
     votes,
     approx_cost,
     CASE
-        WHEN rating >= 4.5 AND votes < 50  THEN '💎 Ultra Hidden'
-        WHEN rating >= 4.5 AND votes < 100 THEN '💎 Hidden Gem'
-        WHEN rating >= 4.0 AND votes < 100 THEN '✨ Under-the-Radar'
+        WHEN rating >= 4.5 AND votes < 50  THEN 'Ultra Hidden'
+        WHEN rating >= 4.5 AND votes < 100 THEN 'Hidden Gem'
+        WHEN rating >= 4.0 AND votes < 100 THEN 'Under the Radar'
     END AS gem_category
 FROM restaurants
 WHERE rating >= 4.0 AND votes < 100 AND votes > 0
@@ -103,10 +103,10 @@ WITH price_segments AS (
 )
 SELECT
     CASE price_quartile
-        WHEN 1 THEN '💰 Budget'
-        WHEN 2 THEN '💰💰 Mid-Range'
-        WHEN 3 THEN '💰💰💰 Premium'
-        WHEN 4 THEN '💰💰💰💰 Luxury'
+        WHEN 1 THEN 'Budget'
+        WHEN 2 THEN 'Mid-Range'
+        WHEN 3 THEN 'Premium'
+        WHEN 4 THEN 'Luxury'
     END AS segment,
     COUNT(*) AS restaurant_count,
     MIN(approx_cost) AS min_cost,
