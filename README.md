@@ -5,15 +5,15 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626.svg?logo=jupyter)
 ![Status](https://img.shields.io/badge/Status-Complete-success.svg)
 
-> An end-to-end data analysis project that processes 56,000+ Zomato restaurant records from Bangalore to uncover trends, segment markets, and generate actionable insights — all using SQL and Python.
+> A data analysis project built around 56,000+ Zomato restaurant records from Bangalore. I cleaned the data, stored it in a relational database, ran SQL queries to find patterns, and visualized the results.
 
 ---
 
 ## What This Project Does
 
-Bangalore's restaurant scene is massive and fiercely competitive. This project digs into that market by taking a raw Zomato dataset and turning it into something useful: a normalized database, a set of well-structured SQL queries, and a collection of visualizations that actually tell a story.
+Bangalore has thousands of restaurants, and the Zomato dataset captures a lot of that. I took the raw data and turned it into a normalized database, wrote SQL queries to explore different angles, and built charts to make sense of what I found.
 
-The goal was to go beyond surface-level analysis. I wanted to understand things like which neighborhoods are oversaturated, whether online ordering actually impacts ratings, and how the market breaks down by price segment.
+I wasn't just looking for averages and counts. I wanted to answer specific questions — like which neighborhoods already have too many restaurants, whether online ordering actually affects ratings, and how the market looks when you split it by price range.
 
 **What I focused on:**
 - Cleaning and normalizing a ~574MB CSV into a proper relational SQLite database (third normal form).
@@ -74,22 +74,22 @@ Most restaurants in Bangalore fall in the 3.5 to 4.4 rating range, forming a rou
 
 ---
 
-### 2. Online Ordering Makes a Real Difference
-Restaurants that accept online orders consistently rate higher, with most landing in the 3.8–4.0 range. The distribution is also tighter compared to offline-only restaurants. If you're running a restaurant in Bangalore, enabling online delivery isn't optional anymore — it's table stakes.
+### 2. Online Ordering and Ratings
+Restaurants that accept online orders tend to rate higher, with most sitting around 3.8–4.0. The spread is also narrower compared to offline-only places. Basically, if a restaurant in Bangalore doesn't offer online ordering, it's already at a disadvantage.
 
 ![Online vs Offline Rating](images/online_vs_offline_rating.png)
 
 ---
 
-### 3. What Cuisines Dominate
-North Indian and Chinese food lead by a wide margin, but South Indian cuisine holds its own — which makes sense given Bangalore's demographics. The diversity of cuisines is one of the things that makes this dataset interesting.
+### 3. Top Cuisines
+North Indian and Chinese food are the most common by far. South Indian is up there too, which isn't surprising for Bangalore. There are over 3,000 unique cuisines in the dataset, so there's a lot of variety beyond just the top few.
 
 ![Top Cuisines](images/top_cuisines.png)
 
 ---
 
-### 4. Cost Varies Significantly by Restaurant Type
-Fine dining and pubs/bars sit at the top of the cost spectrum, while quick bites and delivery-focused places are the most affordable. Not surprising, but the gap is wider than you might expect.
+### 4. Cost by Restaurant Type
+Fine dining and pubs/bars are the most expensive on average. Quick bites and delivery places are the cheapest. The difference between the two ends is pretty significant.
 
 ![Cost by Type](images/cost_by_type.png)
 
@@ -102,15 +102,15 @@ I used `NTILE(4)` in SQL to split restaurants into four price segments: budget, 
 
 ---
 
-### 6. Where the Market Is (and Isn't) Saturated
-By plotting restaurant density against average ratings, I could identify two types of neighborhoods: "sweet spots" (low density, high ratings — good places to open a restaurant) and "red oceans" (crowded markets where ratings tend to suffer).
+### 6. Market Saturation
+I plotted restaurant density against average ratings for each neighborhood. Some areas have very few restaurants but strong ratings — those could be good opportunities. Other areas are packed with restaurants and ratings tend to be lower, which suggests the market there is already crowded.
 
 ![Market Saturation](images/market_saturation.png)
 
 ---
 
-### 7. Most Loved Dishes
-A word cloud of the most frequently liked dishes shows what Bangalore really craves.
+### 7. Popular Dishes
+A word cloud of the most frequently liked dishes across all restaurants. Gives a quick sense of what people order the most.
 
 ![Dishes WordCloud](images/dishes_wordcloud.png)
 
@@ -118,7 +118,7 @@ A word cloud of the most frequently liked dishes shows what Bangalore really cra
 
 ## SQL Techniques Used
 
-Here's a quick overview of the SQL patterns I applied across the 15 queries:
+A summary of the SQL techniques I used across the 15 queries:
 
 | Technique | Where it's used |
 |---|---|
