@@ -158,4 +158,3 @@ A word cloud analysis of the most frequently liked dishes reveals Bangalore's fa
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/himanshu-malik-a3aa0331a/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?logo=github&logoColor=white)](https://github.com/himanshu-0033)
 
-*Built for IIT KGP CDC Portfolio*
